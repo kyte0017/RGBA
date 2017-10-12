@@ -110,8 +110,9 @@ public class RGBAModel extends Observable {
     // the model has changed!
     // broadcast the update method to all registered observers
     private void updateObservers() {
-        this.setChanged();
-        this.notifyObservers();
+        this.setChanged();          //sets the dirty flag on the data
+        this.notifyObservers();     //broadcasts to all listeners that
+        //these two methods come from the observable class
     }
 
     @Override
