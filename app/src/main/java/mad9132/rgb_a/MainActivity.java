@@ -24,7 +24,7 @@ import model.RGBAModel;
  *
  * Features the Update / React Strategy.
  *
- * @author Gerald.Hurdle@AlgonquinCollege.com
+ * @author kyte0017@algonquinlive.com
  * @version 1.0
  */
 public class MainActivity extends Activity implements Observer, SeekBar.OnSeekBarChangeListener {
@@ -72,8 +72,6 @@ public class MainActivity extends Activity implements Observer, SeekBar.OnSeekBa
         mGreenSB = (SeekBar) findViewById(R.id.greenSB);
         mBlueSB = (SeekBar) findViewById(R.id.blueSB);
         mAlphaSB = (SeekBar) findViewById(R.id.alphaSB);
-
-        //TODO: reference the remaining <SeekBar>s: green, blue and alpha
         mRedTV = (TextView) findViewById( R.id.red );
         mGreenTV = (TextView) findViewById(R.id.green);
         mBlueTV = (TextView) findViewById(R.id.blue);
@@ -84,14 +82,12 @@ public class MainActivity extends Activity implements Observer, SeekBar.OnSeekBa
         mGreenSB.setMax(RGBAModel.MAX_RGB);
         mBlueSB.setMax(RGBAModel.MAX_RGB);
         mAlphaSB.setMax(RGBAModel.MAX_ALPHA);
-        //TODO: setMax() for the remaining <SeekBar>s: green, blue and alpha
 
         // register the event handler for each <SeekBar>
         mRedSB.setOnSeekBarChangeListener( this );
         mGreenSB.setOnSeekBarChangeListener(this);
         mBlueSB.setOnSeekBarChangeListener(this);
         mAlphaSB.setOnSeekBarChangeListener(this);
-        //TODO: register the remaining <SeekBar>s: green, blue and alpha
 
         // initialize the View to the values of the Model
         //
